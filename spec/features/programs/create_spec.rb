@@ -31,4 +31,23 @@ describe "Creating Programs" do
     visit "/programs"
     expect(page).to_not have_content("The 1960s")
   end
+
+  it "displays an error when the code is not an alphanumeric string with exactly 6 characters" do
+    expect(Program.count).to eql(0)
+
+    visit "/programs"
+    click_link "New Program"
+    expect(page).to have_content("New Program")
+
+    fill_in "Title", with: "Mad Men"
+    fill_in "Subtitle", with: "The 1960s"
+    fill_in "Code", with: "madmen7"
+    click_button "Create Program"
+
+    expect(page).to have_content("error")
+    expect(Program.count).to eql(0)
+
+    visit "/programs"
+    expect(page).to_not have_content("The 1960s")
+  end
 end
