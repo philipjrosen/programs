@@ -14,7 +14,7 @@
 
   <tbody>
     <% @programs.each do |program| %>
-      <tr>
+      <tr id="<%= dom_id(program) %>">
         <td><%= program.title %></td>
         <td><%= program.subtitle %></td>
         <td><%= program.code %></td>
