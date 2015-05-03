@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503190022) do
+ActiveRecord::Schema.define(version: 20150503192646) do
 
   create_table "programs", force: :cascade do |t|
     t.string   "title"
@@ -20,7 +20,5 @@ ActiveRecord::Schema.define(version: 20150503190022) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "programs", ["code"], name: "index_programs_on_code", unique: true
 
 end

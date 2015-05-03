@@ -7,6 +7,5 @@ class CreatePrograms < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :programs, :code, unique: true
   end
 end
