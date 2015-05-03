@@ -24,7 +24,7 @@ RSpec.describe ProgramsController, type: :controller do
   # Program. As you add validations to Program, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {"title" => "MyTitle", "subtitle" => "MySubtitle", "code" => "AABB99"}
   }
 
   let(:invalid_attributes) {

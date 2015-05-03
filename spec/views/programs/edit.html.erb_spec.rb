@@ -5,7 +5,7 @@ RSpec.describe "programs/edit", type: :view do
     @program = assign(:program, Program.create!(
       :title => "MyString",
       :subtitle => "MyString",
-      :code => "MyString"
+      :code => "AABB99"
     ))
   end
 

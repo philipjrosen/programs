@@ -6,12 +6,12 @@ RSpec.describe "programs/index", type: :view do
       Program.create!(
         :title => "Title",
         :subtitle => "Subtitle",
-        :code => "Code"
+        :code => "AABB99"
       ),
       Program.create!(
         :title => "Title",
         :subtitle => "Subtitle",
-        :code => "Code"
+        :code => "AABB99"
       )
     ])
   end
@@ -20,6 +20,6 @@ RSpec.describe "programs/index", type: :view do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "Subtitle".to_s, :count => 2
-    assert_select "tr>td", :text => "Code".to_s, :count => 2
+    assert_select "tr>td", :text => "AABB99".to_s, :count => 2
   end
 end
